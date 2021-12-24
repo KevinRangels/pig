@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Around | Event Landing</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="./assets/vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="./assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="./assets/css/theme.min.css">
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!-- Navbar (Solid background)-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-scroll-header data-fixed-element>
+        <div class="container px-0 px-xl-3">
+          <button class="navbar-toggler ms-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4 d-flex align-items-center" href="index.html"><img class="d-none d-lg-block" src="assets/img/logo/main.jpg" alt="Around" width="70"><img class="d-lg-none" src="assets/img/logo/main.jpg" alt="Around" width="58"> <span class="">
+              PIG
+          </span></a>
+
+          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="offcanvas-header navbar-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex justify-content-end">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega active"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Demos</a>
+                  <div class="dropdown-menu"><a class="dropdown-column dropdown-column-img bg-secondary" href="index.html" style="background-image: url(img/demo/menu-banner.jpg);"></a>
+                    <div class="dropdown-column"><a class="dropdown-item" href="index.html">Web Template Presentation</a><a class="dropdown-item" href="demo-business-consulting.html">Business Consulting</a><a class="dropdown-item" href="demo-shop-homepage.html">Shop Homepage</a><a class="dropdown-item" href="demo-booking-directory.html">Booking / Directory</a><a class="dropdown-item" href="demo-creative-agency.html">Creative Agency</a><a class="dropdown-item" href="demo-web-studio.html">Web Studio</a><a class="dropdown-item" href="demo-product-software.html">Product Landing - Software</a></div>
+                    <div class="dropdown-column"><a class="dropdown-item" href="demo-product-gadget.html">Product Landing - Gadget</a><a class="dropdown-item" href="demo-mobile-app.html">Mobile App Showcase</a><a class="dropdown-item" href="demo-coworking-space.html">Coworking Space</a><a class="dropdown-item" href="demo-event-landing.html">Event Landing</a><a class="dropdown-item" href="demo-marketing-seo.html">Digital Marketing &amp; SEO</a><a class="dropdown-item" href="demo-food-blog.html">Food Blog</a><a class="dropdown-item" href="demo-personal-portfolio.html">Personal Portfolio</a></div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-mega"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Templates</a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Blog</h5><a class="dropdown-item" href="blog-grid-rs.html">Grid Right Sidebar</a><a class="dropdown-item" href="blog-grid-ls.html">Grid Left Sidebar</a><a class="dropdown-item" href="blog-grid-ns.html">Grid No Sidebar</a><a class="dropdown-item" href="blog-list-rs.html">List Right Sidebar</a><a class="dropdown-item" href="blog-list-ls.html">List Left Sidebar</a><a class="dropdown-item" href="blog-list-ns.html">List No Sidebar</a><a class="dropdown-item" href="blog-single-rs.html">Single Post Right Sidebar</a><a class="dropdown-item" href="blog-single-ls.html">Single Post Left Sidebar</a><a class="dropdown-item" href="blog-single-ns.html">Single Post No Sidebar</a>
+                    </div>
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Portfolio</h5><a class="dropdown-item" href="portfolio-style-1.html">Grid Style 1</a><a class="dropdown-item" href="portfolio-style-2.html">Grid Style 2</a><a class="dropdown-item" href="portfolio-style-3.html">Grid Style 3</a><a class="dropdown-item" href="portfolio-single-side-gallery-grid.html">Project Side Gallery (Grid)</a><a class="dropdown-item" href="portfolio-single-side-gallery-list.html">Project Side Gallery (List)</a><a class="dropdown-item" href="portfolio-single-carousel.html">Project Carousel</a><a class="dropdown-item" href="portfolio-single-wide-gallery.html">Project Wide Gallery</a>
+                    </div>
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Shop</h5><a class="dropdown-item" href="shop-ls.html">Grid Left Sidebar</a><a class="dropdown-item" href="shop-rs.html">Grid Right Sidebar</a><a class="dropdown-item" href="shop-ns.html">Grid No Sidebar</a><a class="dropdown-item" href="shop-single.html">Single Product</a><a class="dropdown-item" href="checkout.html">Cart &amp; Checkout</a><a class="dropdown-item" href="order-tracking.html">Order Tracking</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Dashboard</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="dashboard-orders.html">Orders</a></li>
+                        <li><a class="dropdown-item" href="dashboard-sales.html">Sales</a></li>
+                        <li><a class="dropdown-item" href="dashboard-messages.html">Messages</a></li>
+                        <li><a class="dropdown-item" href="dashboard-followers.html">Followers</a></li>
+                        <li><a class="dropdown-item" href="dashboard-reviews.html">Reviews</a></li>
+                        <li><a class="dropdown-item" href="dashboard-favorites.html">Favorites</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Account Settings</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="account-profile.html">Profile Info</a></li>
+                        <li><a class="dropdown-item" href="account-payment.html">Payment Methods</a></li>
+                        <li><a class="dropdown-item" href="account-notifications.html">Notifications</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="signin-illustration.html">Sign In - Illustration</a></li>
+                    <li><a class="dropdown-item" href="signin-image.html">Sign In - Image</a></li>
+                    <li><a class="dropdown-item" href="signin-signup.html">Sign In - Sign Up</a></li>
+                    <li><a class="dropdown-item" href="password-recovery.html">Password Recovery</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="about.html">About</a></li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Contacts</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="contacts-v1.html">Contacts v.1</a></li>
+                        <li><a class="dropdown-item" href="contacts-v2.html">Contacts v.2</a></li>
+                        <li><a class="dropdown-item" href="contacts-v3.html">Contacts v.3</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Help Center</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="help-topics.html">Help Topics</a></li>
+                        <li><a class="dropdown-item" href="help-single-topic.html">Single Topic</a></li>
+                        <li><a class="dropdown-item" href="help-submit-request.html">Submit a Request</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">404 Not Found</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="404-simple.html">Simple Text</a></li>
+                        <li><a class="dropdown-item" href="404-illustration.html">Illustration</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Coming Soon</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="coming-soon-image.html">Image</a></li>
+                        <li><a class="dropdown-item" href="coming-soon-illustration.html">Illustration</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Docs / UI Kit</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="docs/dev-setup.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-file-text"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">Documentation</span><small class="d-block text-muted">Kick-start customization</small></div>
+                        </div></a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="components/typography.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-layers"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">UI Kit<span class="badge bg-danger ms-2">50+</span></span><small class="d-block text-muted">Flexible components</small></div>
+                        </div></a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="docs/changelog.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-edit"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">Changelog<span class="badge bg-success ms-2">v2.4.0</span></span><small class="d-block text-muted">Regular updates</small></div>
+                        </div></a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="mailto:support@createx.studio">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-life-buoy"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">Support</span><small class="d-block text-muted">support@createx.studio</small></div>
+                        </div></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="bg-size-cover overflow-hidden pt-5 pt-md-6 pt-lg-7" style="max-height: 750px; background-image: url(assets/img/demo/event-landing/hero-bg.jpg);">
+        <div class="container position-relative zindex-5 pt-2 pb-4 pb-md-2">
+          <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-8 text-center">
+              <h1 class="display-4 text-light mb-4">CriptoSan </h1>
+              <div class="d-inline-flex align-items-center mx-1 px-3 mb-4"><i class="ai-calendar h2 mb-0 me-2 text-light"></i><span class="text-light">Diciembre 27, 2021</span></div>
+              <div class="d-inline-flex align-items-center mx-1 px-3 mb-4"><i class="ai-map-pin h2 mb-0 me-2 text-light"></i><span class="text-light">Hotel Oranfe, Los Angeles</span></div>
+              <div class="pt-2"><a class="btn btn-success" href="#tickets" data-scroll>Sorteo Token PIG Wabiner</a></div>
+            </div>
+          </div>
+        </div>
+        <div data-jarallax-element="50" data-disable-parallax-down="md"><img class="d-block mx-auto" src="assets/img/demo/event-landing/people.png" alt="People"></div>
+      </section>
+      <!-- Countdown-->
+      <section class="bg-secondary py-5 py-md-6">
+        <div class="container py-2 py-md-0">
+          <div class="row align-items-center">
+            <div class="col-xl-4 text-center text-xl-start">
+              <h2 class="mb-4 mb-xl-0">Conference will start in:</h2>
+            </div>
+            <div class="col-xl-8">
+              <div class="countdown h2 display-2 justify-content-center justify-content-xl-start" data-countdown="10/01/2021 07:00:00 PM">
+                <div class="countdown-days mb-0 mt-3 me-0 px-4 border-end"><span class="countdown-value fw-normal px-4">0</span><span class="countdown-label fs-lg text-body">Days</span></div>
+                <div class="countdown-hours mb-0 mt-3 me-0 px-4 border-end"><span class="countdown-value fw-normal px-4">0</span><span class="countdown-label fs-lg text-body">Hours</span></div>
+                <div class="countdown-minutes mb-0 mt-3 me-0 px-4 border-end"><span class="countdown-value fw-normal px-4">0</span><span class="countdown-label fs-lg text-body">Mins</span></div>
+                <div class="countdown-seconds mb-0 mt-3 me-0 px-4"><span class="countdown-value fw-normal px-4">0</span><span class="countdown-label fs-lg text-body">Secs</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Split section (Video popup)-->
+      <section class="bg-secondary">
+        <div class="row g-0">
+          <div class="col-md-6 jarallax py-7" data-jarallax data-speed="0.3"><span class="position-absolute top-0 start-0 w-100 h-100 bg-black" style="opacity: 40%;"></span>
+            <div class="jarallax-img" style="background-image: url(assets/img/demo/event-landing/video-bg.jpg);"></div>
+            <div class="position-relative zindex-5 d-flex flex-column align-items-center justify-content-center h-100 px-3 py-4 py-lg-7"><a class="btn-video mb-3" href="https://www.youtube.com/watch?v=zpmRmIFnO6c" data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Instagram Marketing Conference 2020&lt;/h6&gt;"></a><span class="fw-medium text-light">Click me to watch video!</span></div>
+          </div>
+          <div class="col-md-6 px-3 pe-xl-0 ps-lg-5 ps-xl-6 py-2 py-lg-4">
+            <div class="ms-sm-4 py-5 my-sm-0 py-md-6 py-lg-7" style="max-width: 520px;">
+              <h2 class="mb-5">Algunos planes PIG</h2>
+              <div class="d-flex align-items-start mb-grid-gutter"><img class="d-block mt-1" src="assets/img/demo/event-landing/icons/01.svg" alt="Icon" width="43">
+                <div class="ps-4 ms-2">
+                  <h3 class="h5 mb-1">Latest technology &amp; Content</h3>
+                  <p class="fs-sm mb-0">Nam libero tempore, cum soluta nobis est eligendi optio cumque.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-grid-gutter"><img class="d-block mt-1" src="assets/img/demo/event-landing/icons/02.svg" alt="Icon" width="43">
+                <div class="ps-4 ms-2">
+                  <h3 class="h5 mb-1">Creativity &amp; Storytelling</h3>
+                  <p class="fs-sm mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia occaecati cupiditate non provident.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start"><img class="d-block mt-1" src="assets/img/demo/event-landing/icons/03.svg" alt="Icon" width="43">
+                <div class="ps-4 ms-2">
+                  <h3 class="h5 mb-1">Monetization &amp; Commerce</h3>
+                  <p class="fs-sm mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Statistics (Digits)-->
+      <section class="container py-4 pt-md-6 pt-lg-7 pb-md-5">
+        <div class="row pb-lg-4 pt-3">
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center mb-grid-gutter">
+            <h3 class="display-2 fw-normal mb-0">3</h3>
+            <p class="text-muted fs-lg mb-0">Days</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center mb-grid-gutter">
+            <h3 class="display-2 fw-normal mb-0">10</h3>
+            <p class="text-muted fs-lg mb-0">Daily<br>workshops</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center mb-grid-gutter">
+            <h3 class="display-2 fw-normal mb-0">6+</h3>
+            <p class="text-muted fs-lg mb-0">Group<br>discussions</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center mb-grid-gutter">
+            <h3 class="display-2 fw-normal mb-0">8</h3>
+            <p class="text-muted fs-lg mb-0">Speakers</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center mb-grid-gutter">
+            <h3 class="display-2 fw-normal mb-0">5</h3>
+            <p class="text-muted fs-lg mb-0">Countries</p>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center mb-grid-gutter">
+            <h3 class="display-2 fw-normal mb-0">900</h3>
+            <p class="text-muted fs-lg mb-0">Guests</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tickets-->
+      <section class="container position-relative zindex-5 mt-2 mt-md-5" id="tickets">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-11">
+            <div class="bg-gradient rounded-3 pt-5 px-4 pb-4 p-sm-5">
+              <div class="px-md-4">
+                <h2 class="text-light text-center pb-4">Buy tickets</h2>
+                <div class="d-sm-flex justify-content-between align-items-center bg-light rounded-3 px-3 py-4 p-sm-4 mb-grid-gutter text-center text-sm-start">
+                  <div class="me-sm-3 mb-4 mb-sm-0">
+                    <h3 class="h6 mb-2">Full conference pass</h3>
+                    <p class="mb-0">3 days full access + Lunch + Gifts</p>
+                  </div><a class="btn btn-primary" href="#">Buy Now</a>
+                </div>
+                <div class="d-sm-flex justify-content-between align-items-center bg-light rounded-3 px-3 py-4 p-sm-4 mb-grid-gutter text-center text-sm-start">
+                  <div class="me-sm-3 mb-4 mb-sm-0">
+                    <h3 class="h6 mb-2">1 day pass</h3>
+                    <p class="mb-0">1 day full access + Lunch + Gifts</p>
+                  </div><a class="btn btn-primary" href="#">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Partners (logos)-->
+      <section class="position-relative bg-secondary pt-5 pb-4 pb-md-5 pt-md-6 pt-lg-7" style="margin-top: -260px;">
+        <div style="height: 260px;"></div>
+        <div class="shape shape-top shape-curve bg-body">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
+            <path fill="currentColor" d="M3000,185.4V0H0v185.4C496.4,69.8,996.4,12,1500,12S2503.6,69.8,3000,185.4z"></path>
+          </svg>
+        </div>
+        <div class="container pt-3 pt-md-0 pb-md-2">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="row">
+                <div class="col-md-2 col-sm-4 col-6 text-center"><a class="swap-image mb-grid-gutter" href="#"><img class="swap-to" src="assets/img/pattners/bbcc.png" alt="Logo" width="176"><img class="swap-from" src="assets/img/pattners/bbcc.png" alt="Logo" width="176"></a></div>
+                <div class="col-md-2 col-sm-4 col-6 text-center"><a class="swap-image mb-grid-gutter" href="#"><img class="swap-to" src="assets/img/pattners/binance.jpg" alt="Logo" width="176"><img class="swap-from" src="assets/img/pattners/binance.jpg" alt="Logo" width="176"></a></div>
+                <div class="col-md-2 col-sm-4 col-6 text-center"><a class="swap-image mb-grid-gutter" href="#"><img class="swap-to" src="assets/img/pattners/biswap.png" alt="Logo" width="176"><img class="swap-from" src="assets/img/pattners/biswap.png" alt="Logo" width="176"></a></div>
+                <div class="col-md-2 col-sm-4 col-6 text-center"><a class="swap-image mb-grid-gutter" href="#"><img class="swap-to" src="assets/img/pattners/coinGecko.png" alt="Logo" width="176"><img class="swap-from" src="assets/img/pattners/coinGecko.png" alt="Logo" width="176"></a></div>
+                <div class="col-md-2 col-sm-4 col-6 text-center"><a class="swap-image mb-grid-gutter" href="#"><img class="swap-to" src="assets/img/pattners/pancakeswap.jpg" alt="Logo" width="176"><img class="swap-from" src="assets/img/pattners/pancakeswap.jpg" alt="Logo" width="176"></a></div>
+                <div class="col-md-2 col-sm-4 col-6 text-center"><a class="swap-image mb-grid-gutter" href="#"><img class="swap-to" src="assets/img/pattners/pooCoin.jpg" alt="Logo" width="176"><img class="swap-from" src="assets/img/pattners/pooCoin.jpg" alt="Logo" width="176"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-dark pt-5 pb-4">
+      <div class="container pb-2 text-center text-md-start">
+        <div class="row pt-md-3 pb-3">
+          <div class="col-lg-3 col-md-2"><a class="d-block mx-auto mb-4" href="index.html" style="width: 70px;"><img src="./assets/img/logo/main.jpg" alt="Around"></a></div>
+          <div class="col-lg-3 col-md-4 pb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title mb-3">Contacts</h4>
+              <ul>
+                <li><a class="widget-link" href="mailto:contact@example.com">contact@example.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 pb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title mb-3">Collaboration</h4>
+              <ul>
+                <li><a class="widget-link" href="tel:9107848015">910-784-8015</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 pb-4">
+            <div class="widget widget-light">
+              <h4 class="widget-title mb-3">Siguenos</h4>
+              <a class="btn-social bs-outline bs-light bs-facebook bs-lg me-2 mb-2" href="#"><i class="fab fa-discord"></i></a>
+              <a class="btn-social bs-outline bs-light bs-twitter bs-lg me-2 mb-2" href="#"><i class="ai-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <p class="fs-sm text-center mb-0"><span class="text-light opacity-50">© All rights reserved. Made by </span><a class="nav-link-style nav-link-light" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll data-fixed-element><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="./assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="./assets/vendor/jarallax/dist/jarallax-element.min.js"></script>
+    <script src="./assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="./assets/vendor/lg-fullscreen.js/dist/lg-fullscreen.min.js"></script>
+    <script src="./assets/vendor/lg-zoom.js/dist/lg-zoom.min.js"></script>
+    <script src="./assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <!-- Main theme script-->
+    <script src="./assets/js/theme.min.js"></script>
+  </body>
+</html>
